@@ -1,0 +1,164 @@
+:root {
+    --color-background: #eee;
+
+    --element-gap: 48px;
+    --text-gap: 16px;
+
+    --font-regular: 300;
+    --font-medium: 500;
+    --font-bold: 700;
+}
+
+html {
+    font-family: "Roboto", Sans-Serif; 
+}
+
+body{
+    width: 100%;
+    display: grid;
+    justify-items: center;    
+    background-color: var(--color-background);
+}
+
+select {
+    text-align-last: center;
+}
+
+.c-app {
+    width: 600px;
+    padding-top: 32px;
+    margin-bottom: 32px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-gap: var(--element-gap);
+}
+
+.c-app-landing {
+    padding: 32px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-self: center;
+    align-items: center;
+}
+
+.c-body-landing {
+    background-color: var(--color-background);
+}
+
+.c-body-landing h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.c-body-landing h2 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.c-mockup {
+    height: 75vh;
+}
+
+.c-header-landing .c-explanation {
+    margin-top: 48px;
+    margin-bottom: 48px;
+}
+
+.c-header-landing .c-explanation p {
+    font-size: 18px;
+    margin: 8px;
+}
+
+.c-form-item {
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 16px;
+    border-radius: 12px;
+    background-color: rgba(192, 192, 192, 0.5);
+    outline: none;
+    padding: 12px;
+}
+
+.c-form-submit {
+    background-color: rgba(156, 156, 156, 0.9);
+    border: none;
+    outline: none;
+    width: 100px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.c-form-submit:hover {
+    background-color: rgba(84, 84, 84, 0.9);
+    color: #eee;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+}
+
+.c-header{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.c-dropdown {
+    margin: 0 auto;
+}
+
+.c-dropdown select {
+    color: green;
+    font-size: 24px;
+}
+
+.c-table-data tr {
+    text-align: center;
+}
+
+.c-table-data tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+.c-table-header h2 {
+    text-align: center;
+}
+
+thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+@media(max-width:940px){
+    .c-mockup {
+        display: none;
+    }
+    .c-app-landing {
+        padding: 64px;
+        grid-template-columns: 100%;
+    }
+    .c-form-item {
+        font-size: 12px;
+    }
+}
+
+@media(max-width:725px){
+    .c-app{
+        width: 400px;
+        grid-gap: 32px;
+    }
+}
+
+@media(max-width:540px){
+    .c-app {
+        padding: 18px;
+    }
+}
+
+@media(max-width:400px){
+    .c-graph {
+        width: 200px;
+    }
+
+}

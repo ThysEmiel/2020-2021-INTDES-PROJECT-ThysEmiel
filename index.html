@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Default meta -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Displaying growth and current population of a country">
+    <meta name="author" content="Emiel Thys">
+
+    <!-- Favicon setup -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+	<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+	<meta name="msapplication-TileColor" content="#00aba9">
+	<meta name="theme-color" content="#ffffff">
+
+    <!-- Load stylesheets -->
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/screen.css">
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="./script/app.js"></script>
+
+    <!-- Title -->
+    <title>Country Population - Index</title>
+</head>
+<body>
+    <div class="c-app">
+        <div class="c-header">
+            <h1 class="c-center">Country Population</h1>
+        </div>
+    
+        <!-- Dropdown Menu -->
+        <div class="c-dropdown">
+            <select class="js-countries"></select>
+        </div>
+        <!-- -->
+        <div class="c-data">
+            <!-- Graph -->
+            <canvas class="js-graph c-graph"></canvas>
+            <!-- -->
+        </div>
+        <!-- Table Under graph -->
+        <div class="c-table">
+            <div class="c-table-header">
+                <h2>Data in table</h2>
+            </div>
+            <div class="c-table-data js-table-data">
+                <table style="width:100%">
+                    <tr>
+                      <th>Firstname</th>
+                      <th>Lastname</th>
+                      <th>Age</th>
+                    </tr>
+                    <tr>
+                      <td>Jill</td>
+                      <td>Smith</td>
+                      <td>50</td>
+                    </tr>
+                    <tr>
+                      <td>Eve</td>
+                      <td>Jackson</td>
+                      <td>94</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <!-- -->
+    </div>
+</body>
+</html>

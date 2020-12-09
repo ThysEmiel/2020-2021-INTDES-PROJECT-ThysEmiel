@@ -1,12 +1,10 @@
 :root {
     --color-background: #eee;
 
+    --color-main: #009879;
+
     --element-gap: 48px;
     --text-gap: 16px;
-
-    --font-regular: 300;
-    --font-medium: 500;
-    --font-bold: 700;
 }
 
 html {
@@ -22,6 +20,14 @@ body{
 
 select {
     text-align-last: center;
+}
+
+::-moz-selection { /* Code for Firefox */
+    background: rgb(0, 177, 141);
+  }
+  
+::selection {
+    background: rgb(0, 177, 141);
 }
 
 .c-app {
@@ -70,7 +76,7 @@ select {
 }
 
 .c-form-item {
-    width: 100%;
+    width: 85%;
     font-size: 18px;
     margin-bottom: 16px;
     border-radius: 12px;
@@ -80,7 +86,8 @@ select {
 }
 
 .c-form-submit {
-    background-color: rgba(156, 156, 156, 0.9);
+    background-color: var(--color-main);
+    color: #eee;
     border: none;
     outline: none;
     width: 100px;
@@ -89,11 +96,16 @@ select {
 }
 
 .c-form-submit:hover {
-    background-color: rgba(84, 84, 84, 0.9);
+    background-color: rgb(0, 177, 141);
     color: #eee;
     border: none;
     outline: none;
     border-radius: 8px;
+}
+
+.c-form-label {
+    margin-left: 8px;
+    padding-bottom: 8px;
 }
 
 .c-header{
@@ -108,8 +120,14 @@ select {
 }
 
 .c-dropdown select {
-    color: green;
+    color: var(--color-main);
     font-size: 24px;
+    border-radius: 8px;
+    outline: none;
+}
+
+.c-dropdown select:hover {
+    box-shadow: 0 0 2px var(--color-main);
 }
 
 .c-table-data tr {
@@ -118,16 +136,26 @@ select {
 
 .c-table-data tr:nth-child(even) {
     background-color: #dddddd;
-  }
+}
+
+.c-table-data tr:nth-child(n):hover {
+    background-color: rgb(0, 177, 141);
+}
 
 .c-table-header h2 {
     text-align: center;
 }
 
 thead tr {
-    background-color: #009879;
+    background-color: var(--color-main);
     color: #ffffff;
     text-align: left;
+}
+
+@media(max-width:1024px){
+    .c-mockup {
+        height: 60vh;
+    }
 }
 
 @media(max-width:940px){

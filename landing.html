@@ -20,6 +20,9 @@
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/screen.css">
 
+    <!-- Scripts -->
+    <script src="/script/validation.js"></script>
+
     <title>Country Population - Landing</title>
 </head>
 <body class="c-body-landing">
@@ -37,8 +40,8 @@
 
             <div class="c-form">
                 <form>
-                    <input class="c-form-item" type="text" id="name" name="name" placeholder="name" required>
-                    <input class="c-form-item" type="email" id="email" name="email" placeholder="email" required>
+                    <label class="c-form-label" for="email">Email address <span class="c-label__error-message">{errormessage}</span></label>
+                    <input class="c-form-item" type="email" id="email" name="email" placeholder="eg. john.doe@gmail.com" required>
                     <input class="c-form-submit" type="submit" value="Sign Up">
                 </form> 
             </div>

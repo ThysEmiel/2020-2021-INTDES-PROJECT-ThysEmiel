@@ -73,8 +73,8 @@ const generateChart = function(json) {
             borderWidth: 1,
             datasets: [{
                 label: `Population Growth Of ${json[1][0]["country"]["value"]} (Yearly)`,
-                backgroundColor: 'rgb(128, 128, 128)',
-                borderColor: 'rgb(128, 128, 128)',
+                backgroundColor: 'rgb(0,152,121)',
+                borderColor: 'rgb(0, 177, 141)',
                 data: data,
                 fill: false
             }]

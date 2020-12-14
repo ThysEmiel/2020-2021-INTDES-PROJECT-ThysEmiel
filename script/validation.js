@@ -1,6 +1,7 @@
 /* -------------------------------------------------------------------------- */
 // Alle interactieve onderdelen voor onze site. We maken van alle inputs een object met zijn eigen eigenschappen.
-let email = {};
+let email = {},
+	signInButton;
 /* -------------------------------------------------------------------------- */
 
 /* -------------------------------------------------------------------------- */
@@ -13,7 +14,9 @@ const isValidEmailAddress = function(emailAddress) {
 const isEmpty = function(fieldValue) {
 	return !fieldValue || !fieldValue.length;
 };
+/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
 const doubleCheckEmailAddress = function() {
 	if (isValidEmailAddress(email.input.value)) {
 		// Stop met dit veld in de gaten te houden; het is in orde.
@@ -42,11 +45,29 @@ const removeErrors = function(formField) {
 
 /* -------------------------------------------------------------------------- */
 const getDOMElements = function() {
-	email.errorMessage = document.querySelector('.js-email-error-message');
+	email.label = document.querySelector('.js-email-label');
+	email.errorMessage = email.label.querySelector('.js-email-error-message');
 	email.input = document.querySelector('.js-email-input');
 	email.field = document.querySelector('.js-email-field');
 
+	// Optional
+	// remember.label = document.querySelector('.js-remember-label');
+	// remember.errorMessage = null; // Currently not available
+	// remember.field = document.querySelector('.js-remember-input');
+
 	signInButton = document.querySelector('.js-sign-in-button');
+
+	// Check jezelf; hover over de gelogde DOM elementen in de console.
+	// console.log(
+	// 	'email',
+	// 	email,
+	// 	'password',
+	// 	password,
+	// 	'remember',
+	// 	remember,
+	// 	'button',
+	// 	signInButton
+	// );
 };
 
 const enableListeners = function() {
@@ -66,22 +87,30 @@ const enableListeners = function() {
 	});
 
 	signInButton.addEventListener('click', function(e) {
+		// We gaan de form zelf versturen wanneer nodig.
 		e.preventDefault();
 
-		if (isValidEmailAddress(email.input.value)) {
+		if (
+			isValidEmailAddress(email.input.value)
+		) {
 			console.log('Form is good to go!');
 		} else {
+			// Stuk herhalende code...
 			addErrors(email);
 			email.input.addEventListener('input', doubleCheckEmailAddress);
 		}
 	});
 };
+/* -------------------------------------------------------------------------- */
 
+/* -------------------------------------------------------------------------- */
+// We kunnen pas iets doen met onze html-content (DOM) als die geladen is.
 document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOM loaded 🥳!');
-    
+	// We splitsen alles netjes op in verschillende functies.
+	// 1. Alle linken leggen naar onze HTML.
 	getDOMElements();
 
+	// 2. We voegen listeners toe om te wachten op interactie
 	enableListeners();
 });
 /* -------------------------------------------------------------------------- */

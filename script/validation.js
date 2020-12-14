@@ -106,6 +106,7 @@ const enableListeners = function() {
 /* -------------------------------------------------------------------------- */
 // We kunnen pas iets doen met onze html-content (DOM) als die geladen is.
 document.addEventListener('DOMContentLoaded', function() {
+	console.log('DOM loaded 🥳!');
 	// We splitsen alles netjes op in verschillende functies.
 	// 1. Alle linken leggen naar onze HTML.
 	getDOMElements();

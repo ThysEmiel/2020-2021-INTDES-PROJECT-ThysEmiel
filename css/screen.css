@@ -120,7 +120,6 @@ select {
 
 .c-label__error-message {
     font-weight: 600;
-	float: right;
     display: none;
     color: var(--global-color-error);
 }

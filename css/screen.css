@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 :root {
     --color-background: #eee;
 
@@ -199,6 +201,11 @@ thead tr {
     .c-mockup {
         height: 60vh;
     }
+	
+	/*.c-button {
+		display: block;
+		margin: 0 auto;
+	}*/
 }
 
 @media(max-width:940px){
